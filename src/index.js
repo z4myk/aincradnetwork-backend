@@ -10,8 +10,8 @@ const port = process.env.PORT;
 //middleware
 app.use(cors())
 app.use(express.json())
-app.use('/api', publicationRoutes)
-app.use('/api', eventRoutes)
+app.use('/', eventRoutes)
+app.use('/', publicationRoutes)
 
 //routes
 app.get('/', (req, res) => {
