@@ -15,10 +15,8 @@ app.use('/api', publicationRoutes)
 
 //routes
 app.get('/', (req, res) => {
-    res.send("welcome to my api")
+    res.send("aincrad api")
 })
-
-
 
 //mongo db connection
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log('DB ONLINE')).catch((error) => console.log(error))
