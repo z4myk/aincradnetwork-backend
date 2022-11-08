@@ -13,7 +13,7 @@ app.use(express.json())
 app.use('/api', eventRoutes)
 app.use('/api', publicationRoutes)
 
-//routes
+//routes 
 app.get('/', (req, res) => {
     res.send("aincrad api")
 })
@@ -22,6 +22,6 @@ app.get('/', (req, res) => {
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log('DB ONLINE')).catch((error) => console.log(error))
 
 
-app.listen(9000, () => {
-    console.log('Servidor abierto en puerto', port)
+app.listen(port || "9000", () => {
+    console.log('Servidor abierto en puerto', port || "9000")
 })
